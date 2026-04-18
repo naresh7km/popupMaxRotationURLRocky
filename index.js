@@ -15,7 +15,7 @@ const TEST_BYPASS_IP = "45.151.152.118";
 // Shared with the admin server — the presigned URL it last published.
 const KEY_CURRENT_URL = "current:url";
 
-const redis = new Redis(process.env.REDIS_URL);
+const redis = new Redis(process.env.REDIS_LINK_UPDATION_URL);
 redis.on("error", (err) => console.error("Redis error:", err.message));
 
 function checkOrigin(req) {
